@@ -23,6 +23,17 @@ connection.connect((err) => {
     }
     })
 
+    app.post('/post', (req, res)=>{
+        const {id, name, employee_code, salary} = req.body
+    
+        if ( !name || !employee_code ||  !salary){
+            return res.json('Enter valid details')
+        }
+    
+        connection.promise().query('insert into empolyee_details values (?,?,?,?)', [id,name,employee_code,salary])
+        .then(data => res.status(200).send(data[0]))
+        .catch(err => console.log(err))
+    })
 
 app.get('/get', (req,res) =>{
     connection.promise().query('SELECT * FROM empolyee_details')
