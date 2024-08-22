@@ -1,12 +1,12 @@
 {
-  "name": "crud2",
+  "name": "crud2-nathan",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "nodemon main.js"
   },
-  "keywords": [],
+  "keywords": ["backend","backend script","http","https","delete","put","get","post","nodemon","crud"],
   "author": "",
   "license": "ISC",
   "dependencies": {
